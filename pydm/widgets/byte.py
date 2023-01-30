@@ -197,8 +197,9 @@ class PyDMByteIndicator(QWidget, PyDMWidget):
             value = int(self.value) << abs(self._shift)
         else:
             value = int(self.value) >> self._shift
-        if value < 0:
-            value = 0
+ 
+        #if value < 0:
+        #    value = 0
 
         bits = [(value >> i) & 1
                 for i in range(self._num_bits)]
